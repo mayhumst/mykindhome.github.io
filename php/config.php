@@ -1,4 +1,4 @@
-<?php
+<?php //establishes connection to mysql server
 
 $db_user = 'root';
 $db_pass = 'MidnightV0lc@n0s';

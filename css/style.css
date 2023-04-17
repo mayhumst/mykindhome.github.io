@@ -58,6 +58,34 @@
     padding: 12px 20px 12px 20px; /*pad and center*/
     text-align: center;
   }
+
+  .sign-in-container {
+    margin: 50px;
+  }
+
+  .nest-div {
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+  }
+
+  .nested-signin {
+    margin: auto;
+    border: #884e1b solid 3px;
+    border-radius: 50px;
+    width: 500px; 
+    height: 500px;
+    justify-content: center;
+  }
+
+  .nested-analytics {
+    border: black solid 3px;
+    width: 500px; 
+    height: 500px;
+    justify-content: center;
+  }
   
   nav ul {
     list-style: none;
