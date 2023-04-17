@@ -1,0 +1,79 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f9ebc7;
+  font-family: "DM Sans", sans-serif;
+  height: 4000px;
+  color: #434431;
+}
+
+/*NAVBAR+HEADER*/
+
+.header {
+  background-color: #f9ebc7;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: .3s;
+    z-index: 100;
+}
+
+.scroll-color {
+  background-color: #b99470 !important;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between; /*align logo/list left, signin right, autospace between*/
+  padding: 10px;
+}
+
+.logo {
+  width: 200px;
+  margin-right: 40px;
+}
+
+.left {
+  display: flex; /*contains logo and list, NOT signin*/
+}
+
+.signin {
+  padding: 12px 20px 12px 20px; /*pad and center*/
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex; /* make the list items flex items */
+  justify-content: space-between; /* distribute the items evenly */
+}
+
+nav li {
+  text-align: center; /* center the text within the item */
+  position: relative; /* make the dropdown menus positionable */
+  padding-top: 12px; /*vertically aligned*/
+  padding-bottom: 12px;
+  min-width: 60px; /*dont compress words*/
+}
+
+nav a {
+  color: #434431; /*link font color*/
+  text-decoration: none; /*dont underline links*/
+  padding: 12px 20px 12px 20px; /*evenly spaced, vertically aligned*/
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+nav a:hover {
+  color: #5f6f52;
+}
+
+.current-page {
+  color: #5f6f52;
+  font-weight: 700;
+}
+
+/*END NAVBAR+HEADER*/

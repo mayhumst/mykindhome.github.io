@@ -1,0 +1,325 @@
+/* Color Palette
+
+#434431 dark
+#5f6f52 medium green
+#a9b388 light green
+#fefae0 lightest
+#f9ebc7 background, light
+#b99470 light brown
+#bc6c25 orange brown
+#884e1b dark orange brown
+#707f99 light blue
+#46546d dark blue
+
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background-color: #f9ebc7;
+    font-family: "DM Sans", sans-serif;
+    color: #434431;
+  }
+  
+  /*NAVBAR+HEADER*/
+
+  .header {
+    background-color: #f9ebc7;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: .3s;
+    z-index: 100;
+  }
+
+  .scroll-color {
+    background-color: #b99470 !important;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between; /*align logo/list left, signin right, autospace between*/
+    padding: 10px;
+  }
+  
+  .logo {
+    width: 200px;
+    margin-right: 40px;
+  }
+  
+  .left {
+    display: flex; /*contains logo and list, NOT signin*/
+  }
+  
+  .signin {
+    padding: 12px 20px 12px 20px; /*pad and center*/
+    text-align: center;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex; /* make the list items flex items */
+    justify-content: space-between; /* distribute the items evenly */
+  }
+  
+  nav li {
+    text-align: center; /* center the text within the item */
+    position: relative; /* make the dropdown menus positionable */
+    padding-top: 12px; /*vertically aligned*/
+    padding-bottom: 12px;
+    min-width: 60px; /*dont compress words*/
+  }
+  
+  nav a {
+    color: #434431; /*link font color*/
+    text-decoration: none; /*dont underline links*/
+    padding: 12px 20px 12px 20px; /*evenly spaced, vertically aligned*/
+    font-weight: 500;
+    white-space: nowrap;
+  }
+  
+  nav a:hover {
+    color: #5f6f52;
+  }
+
+  .current-page {
+    color: #5f6f52;
+    font-weight: 700;
+  }
+  
+  /*END NAVBAR+HEADER*/
+  /*START BODY CONTENT*/
+
+  .page-top {
+    margin-top: 100px;
+  }
+
+  /*ABOUT PAGE*/
+
+  .about-info {
+    margin: 100px;
+  }
+
+  .about-info h1 {
+    color: #707f99;
+    margin: 30px 0px 50px;
+    font-size: 40px;
+  }
+
+  .about-info .welcome {
+    margin: 15px 0px 0px 0px !important;
+    padding: 0px !important;
+  }
+
+  .about-info p {
+    margin: 50px 0px;
+    font-size: 28px;
+    min-width: 500px;
+  }
+
+  .p-special {
+    text-align: center;
+    font-size: 30px !important;
+    margin-left: 60px !important;
+    margin-right: 60px !important;
+    padding: 15px 30px;
+    border: #707f99 solid 3px;
+    color: #46546d;
+    font-weight: 500;
+  }
+
+  .person img {
+    padding: 0px 20px;
+  }
+
+  .person {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 100px;
+  }
+
+  .person p {
+    font-size: 22px;
+    padding: 0px 20px;
+  }
+
+  /*PHOTOSYNTHESIS GAME*/
+
+  #drag-n-drop {
+    position: relative;
+}
+
+.slot {
+    border: solid black 2px;
+    width: 50px;
+    height: 50px;
+}
+
+.highlight-border {
+    border: solid red 2px;
+}
+
+.item {
+    position: absolute;
+    text-align: center;
+    border: 2px solid black;
+    width: 50px;
+    height: 50px;
+}
+
+.slots {
+    width: 300px;
+    height: 300px;
+    border: solid black 2px;
+    display: flex;
+    justify-content: space-between;
+    margin: 50px;
+}
+
+.left-slots {
+    margin: 25px 50px;
+}
+
+.left-slots .slot {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.right-slots {
+    margin: 125px 50px;
+}
+
+.word-bank {
+    width: 500px;
+    height: 100px;
+    border: solid black 2px;
+    list-style-type: none;
+}
+
+#item1 {
+    bottom: 25px;
+    left: 60px;
+}
+
+#item2 {
+    bottom: 25px;
+    left: 170px;
+}
+
+#item3 {
+    bottom: 25px;
+    left: 280px;
+}
+
+#item4 {
+    bottom: 25px;
+    left: 390px;
+}
+
+/*PHOTOSYNTHESIS LESSON BODY*/
+
+.blue-word {
+    color:#46546d
+}
+
+.orange-word {
+    color: #bc6c25;
+}
+
+.dark-orange-word {
+    color:#884e1b;
+}
+
+.green-word {
+    color: #5f6f52;
+}
+
+.lesson-body {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.lesson-title {
+    color:#707f99;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.lesson-body p {
+    font-size: 24px;
+    margin: 20px 0px;
+}
+
+.lesson-body h3 {
+    font-size: 30px;
+    margin-top: 30px;
+}
+
+.word-bank p {
+    font-size: 16px;
+}
+
+/*Lesson List*/
+
+.learn-page {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.lesson {
+    border: solid 2px #884e1b;
+    padding: 20px;
+    border-radius: 24px;
+    position: relative;
+    width: 700px;
+    height: 220px;
+    margin: auto;
+    transition: 0.3s;
+    margin-bottom: 50px;
+  }
+
+  .lesson a {
+    text-decoration: none;
+    font-size: 38px;
+    font-weight: bold;
+    color: #a9b388;
+    margin-bottom: 50px !important;
+  }
+
+  .lesson hr {
+    margin-top: 20px;
+    margin-left: 20px;
+    color: #434431;
+    background-color: #434431;
+    width: 350px;
+    height: 2px;
+    border-style: none;
+    border-width: 1px;
+  }
+
+  .lesson img {
+    width: 240px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  .lesson h5 {
+    font-size: 28px;
+    color: #5f6f52;
+    margin-top: 20px !important;
+  }
+
+  .lesson:hover {
+    box-shadow: 5px 5px 10px #5f6f52;
+    transition: 0.3s;
+  }
+
+  .lesson .text-left {
+    width: 470px;
+    
+  }
