@@ -123,9 +123,10 @@
   .p-special {
     text-align: center;
     font-size: 30px !important;
-    margin-left: 60px !important;
-    margin-right: 60px !important;
-    padding: 15px 30px;
+    margin: auto !important;
+    width: 800px;
+    min-width:400px;
+    padding: 40px 60px;
     border: #707f99 solid 3px;
     color: #46546d;
     font-weight: 500;
