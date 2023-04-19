@@ -59,34 +59,6 @@
     text-align: center;
   }
 
-  .sign-in-container {
-    margin: 50px;
-  }
-
-  .nest-div {
-    margin: auto;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    display: flex;
-  }
-
-  .nested-signin {
-    margin: auto;
-    border: #884e1b solid 3px;
-    border-radius: 50px;
-    width: 500px; 
-    height: 500px;
-    justify-content: center;
-  }
-
-  .nested-analytics {
-    border: black solid 3px;
-    width: 500px; 
-    height: 500px;
-    justify-content: center;
-  }
-  
   nav ul {
     list-style: none;
     display: flex; /* make the list items flex items */
@@ -119,6 +91,85 @@
   }
   
   /*END NAVBAR+HEADER*/
+  /* SIGN IN/UP */
+
+  .sign-in-container {
+    margin: auto;
+    margin-top: 100px;
+    border: #5f6f52 solid 3px;
+    border-radius: 50px;
+    width: 400px;
+    height: 500px;
+  }
+
+  .sign-in-container form {
+    margin: 50px 50px;
+  }
+
+  .sign-in-container h1 {
+    color: #a9b388;
+  }
+
+  .sign-in-container label {
+    color: #5f6f52;
+    display:list-item;
+    list-style-type: none;
+    margin-left: 20px;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-bottom: 8px;
+  }
+
+  .sign-in-container input {
+    display:list-item;
+    list-style-type: none;
+  }
+
+  .sign-in-container input[type=email], .sign-in-container input[type=password] {
+    background-color: #fefae0;
+    color: #434431;
+    border: transparent solid 2px;
+    width: 275px;
+    transition: border-color .3s cubic-bezier(.25,.01,.25,1) 0s, color .3s cubic-bezier(.25,.01,.25,1) 0s;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+
+  .sign-in-container input[type=submit] { 
+    background-color: #a9b388;
+    color: #5f6f52;
+    border: #5f6f52 solid 3px;
+    border-radius: 50px;
+    width: 150px;
+    height: 50px;
+    margin-top: 60px !important;
+    margin: auto;
+    font-size: 18px;
+    font-family: inherit;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+
+  .sign-in-container input[type=submit]:hover {
+    color: #434431;
+    border-color: #434431;
+    box-shadow: 4px 4px 10px -3px #434431;
+    transition: 0.3s;
+  }
+
+  .sign-in-container input[type=email]:hover, .sign-in-container input[type=email]:focus, .sign-in-container input[type=password]:hover, .sign-in-container input[type=password]:focus {
+    outline: none;
+    border-color: #434431;
+  } /*transition credits: @alexruix on UIVERSE */  
+
+  .nested-analytics {
+    border: black solid 3px;
+    width: 500px; 
+    height: 500px;
+    justify-content: center;
+  }
+
   /*START BODY CONTENT*/
 
   .page-top {
