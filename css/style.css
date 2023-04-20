@@ -24,7 +24,12 @@
     color: #434431;
   }
   
+  .page-top {
+    margin-top: 100px;
+  }
+
   /*NAVBAR+HEADER*/
+  /*#region Header*/
 
   .header {
     background-color: #f9ebc7;
@@ -89,9 +94,10 @@
     color: #5f6f52;
     font-weight: 700;
   }
-  
+  /*#endregion*/
+
   /*END NAVBAR+HEADER*/
-  /* SIGN IN/UP */
+  /* #region SIGN IN/UP */
 
   .sign-in-container {
     margin: auto;
@@ -163,20 +169,11 @@
     border-color: #434431;
   } /*transition credits: @alexruix on UIVERSE */  
 
-  .nested-analytics {
-    border: black solid 3px;
-    width: 500px; 
-    height: 500px;
-    justify-content: center;
-  }
+  /*#endregion*/
 
   /*START BODY CONTENT*/
 
-  .page-top {
-    margin-top: 100px;
-  }
-
-  /*ABOUT PAGE*/
+  /*#region ABOUT PAGE*/
 
   .about-info {
     margin: 100px;
@@ -227,7 +224,9 @@
     padding: 0px 20px;
   }
 
-  /*PHOTOSYNTHESIS GAME*/
+  /*#endregion*/
+  
+  /*#region PHOTOSYNTHESIS GAME*/
 
   #drag-n-drop {
     position: relative;
@@ -300,7 +299,9 @@
     left: 390px;
 }
 
-/*PHOTOSYNTHESIS LESSON BODY*/
+/*#endregion*/
+
+/*#region PHOTOSYNTHESIS LESSON BODY*/
 
 .blue-word {
     color:#46546d
@@ -343,7 +344,9 @@
     font-size: 16px;
 }
 
-/*Lesson List*/
+/*#endregion*/
+
+/*#region Lesson List*/
 
 .learn-page {
     margin-left: 100px;
@@ -403,3 +406,6 @@
     width: 470px;
     
   }
+
+  /*#endregion*/
+  
