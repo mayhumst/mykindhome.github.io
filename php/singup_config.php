@@ -12,7 +12,7 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 session_start()
 
 // initializing variables
-$email = "";
+
 
 $errors = array();
 
@@ -50,8 +50,9 @@ if(count($errors) == 0){
     $_SESSION['email'] = $email;
     $_SESSION['success'] = "You are now registered";
 
+    
     // header('location: index.php')
-
+}
 
 //-----------------------------------------LOGIN USER------------------------------------------------
 

@@ -3,7 +3,7 @@
 
 //include('signup_config.php')
 
-//require_once('singup_config.php'); //establishes connection to mysql server
+require_once('config.php'); //establishes connection to mysql server
 ?>
 
 <!DOCTYPE html>
@@ -42,7 +42,7 @@
 
 
   <?php
-  /*
+  
   
   if(isset($_POST["signupbtn"])){
     echo 'User submitted';
@@ -59,7 +59,7 @@
       echo 'There were errors while saving the data';
     }
    }
-   */
+   
    ?> 
 </div>
 
