@@ -1,6 +1,9 @@
 
-<?php
-  require_once('config.php'); //establishes connection to mysql server
+<?php 
+
+//include('signup_config.php')
+
+//require_once('singup_config.php'); //establishes connection to mysql server
 ?>
 
 <!DOCTYPE html>
@@ -25,10 +28,10 @@
         <p>Please fill in this form to create an account.</p>
 
         <label for="email"><b>Email</b></label>
-        <input type="email" placeholder="Enter Email" name="email" required>
+        <input type="email" placeholder="janedoe@gmail.com" name="email" required>
 
         <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" required>
+        <input type="password" placeholder="12345" name="psw" required>
         
         <input type="submit" name="signupbtn" value="Sign Up">
     </form>
@@ -36,7 +39,10 @@
 
 <!--CAPTURING DATA-->
 <div>
+
+
   <?php
+  /*
   
   if(isset($_POST["signupbtn"])){
     echo 'User submitted';
@@ -53,6 +59,7 @@
       echo 'There were errors while saving the data';
     }
    }
+   */
    ?> 
 </div>
 

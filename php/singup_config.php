@@ -24,7 +24,7 @@ $db = mysqli_connect('localhost', 'root', '', 'mykindhome') or die('Could not co
 $email = mysqli_real_escape_string($db, $_POST['email']);
 $psw = mysqli_real_escape_string($db, $_POST['psw']);
 
-// form validation
+// form validation ------ is this needed?? check
 if(empty($email)) {array_push($errors, "Email is required")};
 if(empty($psw)) {array_push($errors, "Password is required")};
 
@@ -48,20 +48,15 @@ if(count($errors) == 0){
 
     mysqli_query($db, $query);
     $_SESSION['email'] = $email;
-    $_SESSION['success'] = "You are now logged in";
+    $_SESSION['success'] = "You are now registered";
 
-    header('location: index.php')
+    // header('location: index.php')
+
 
 //-----------------------------------------LOGIN USER------------------------------------------------
 
-if(isset($_POST['login_user'])){
-    $email = mysqli_real_escape_string($db, $_POST['email']);
-    $password = mysqli_real_escape_string($db, $_POST['psw']);
 
-    if(empty($email)){
-        array_push($errors, Email is required);
-    }
-}
+
 
 
 
