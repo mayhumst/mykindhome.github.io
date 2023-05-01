@@ -31,6 +31,45 @@
   /*NAVBAR+HEADER*/
   /*#region Header*/
 
+  
+.header a {
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background: none;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
+  padding: 12px 6px !important;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.header a:focus,
+.header a:hover {
+  color: #5f6f52;
+}
+
+.header a:focus:after,
+.header a:hover:after {
+  width: 100%;
+  left: 0%;
+}
+
+.header a:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #5f6f52;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
+
   .header {
     background-color: #f9ebc7;
     position: fixed;
@@ -230,12 +269,14 @@
 
   #drag-n-drop {
     position: relative;
+    margin: auto;
+    
 }
 
 .slot {
     border: solid black 2px;
-    width: 50px;
-    height: 50px;
+    width: 75px;
+    height: 75px;
 }
 
 .highlight-border {
@@ -246,21 +287,29 @@
     position: absolute;
     text-align: center;
     border: 2px solid black;
-    width: 50px;
-    height: 50px;
+    width: 75px;
+    height: 75px;
+    background-color: #f9ebc7;
 }
 
 .slots {
-    width: 300px;
-    height: 300px;
+    width: 350px;
+    height: 350px;
     border: solid black 2px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 50px;
 }
 
+.slots h5 {
+  width: 75px;
+  text-align: center;
+  font-size: 18px;
+  color: #707f99;
+}
+
 .left-slots {
-    margin: 25px 50px;
+  margin-top: 10px;
 }
 
 .left-slots .slot {
@@ -269,33 +318,41 @@
 }
 
 .right-slots {
-    margin: 125px 50px;
+    margin-top: 10px;
+}
+
+#slot4 {
+  margin-top: 112px;
+}
+
+#slot1 {
+  margin-top: 10px !important;
 }
 
 .word-bank {
-    width: 500px;
+    width: 520px;
     height: 100px;
     border: solid black 2px;
     list-style-type: none;
 }
 
 #item1 {
-    bottom: 25px;
+    bottom: 12px;
     left: 60px;
 }
 
 #item2 {
-    bottom: 25px;
+    bottom: 12px;
     left: 170px;
 }
 
 #item3 {
-    bottom: 25px;
+    bottom: 12px;
     left: 280px;
 }
 
 #item4 {
-    bottom: 25px;
+    bottom: 12px;
     left: 390px;
 }
 
