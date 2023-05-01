@@ -20,6 +20,32 @@ require_once('config.php'); //establishes connection to mysql server
  
 <body> <!-- This is the sign IN form. This page is nested within signin.html-->
     <div class="sign-in-container">
+        <?php
+        if(isset($_POST['signinbtn'])){
+        $email = $_POST['email'];
+        $psw = $_POST['password'];
+
+            $sql = "SELECT * FROM users WHERE email = '$email'";
+            $result = mysqli_query($db, $sql);
+            $user = mysqli_fetch_array($result, MYSQLI_ASSOC);
+
+            if ($user){
+                if ($psw == $user["psw"]){       //if (password_verify($psw, $user["psw"]))
+
+                    header("Location: ../html/mainPages/game.html");
+                    die();
+                }else{
+                    echo "<div class='alert alert-danger'>Password does not match</div>";
+
+                }
+            }else{
+                echo "<div class='alert alert-danger'>Email does not match</div>";
+            }
+        }
+
+
+        ?>
+
         <form action="signin.php" method="post">
             <h1>Log In</h1>
             <label for="email">Email</label>
@@ -34,31 +60,6 @@ require_once('config.php'); //establishes connection to mysql server
         </form>
 </div>
 
-<?php
-    if(isset($_POST['signinbtn'])){
-        $email = $_POST['email'];
-        $psw = $_POST['password'];
-
-            $sql = "SELECT * FROM users WHERE email = '$email'";
-            $result = mysqli_query($db, $sql);
-            $user = mysqli_fetch_array($result, MYSQLI_ASSOC);
-
-            if ($user){
-                if ($psw == $user["psw"]){
-
-                    header("Location: ../html/mainPages/game.html");
-                    die();
-                }else{
-                    echo "alert alert-danger - Password does not match";
-
-                }
-            }else{
-                echo "alert alert-danger: Email does not match";
-            }
-        }
-
-
-        ?>
 
 <!--CAPTURING DATA-->
 

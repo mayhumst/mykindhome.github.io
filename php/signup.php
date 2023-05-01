@@ -23,6 +23,40 @@ require_once('config.php'); //establishes connection to mysql server
 
 <!-- This is the sign UP form. This page is nested within signup.html-->
 <div class="sign-in-container"> 
+
+    <?php
+    $errors = array()
+
+    $psw_hash = password_hash($psw, PASSWORD_DEFAULT);
+
+    require_once('config.php'); //establishes connection to mysql server
+
+    $sql = "SELECT * FROM users WHERE email = '$email";
+    $result = mysqli_query($db, $sql);
+    $rowcount = mysqli_num_rows($result);
+    if ($rowcount>0){
+      array_push($errors, "This email is already registered");
+    }
+
+    if (count($errors)) > 0{
+      for each($errors as $error){
+      echo "<div class ='alert alert danger'>$error</div>";
+      }
+    }else{
+      $sql = "INSERT INTO users (email, psw) VALUES ($email, $psw)";
+
+      $stmt = mysqli_stmt_init($db);
+      $prepareStmt = mysqli_stmt_prepare($stmt, $sql);
+      if ($prepareStmt){
+        mysqli_stmt_bind_param($stmt, "ss" $email, $psw_hash);
+        mysqli_stmt_execute($stmt);
+        echo "<div class ='alert alert success'>You are registered successfully</div> ";
+      }else{
+        die("Something went wrong...");
+      }
+    }
+
+    ?>
     <form action="signup.php" method="post">
         <h1>Sign Up</h1>
         <p>Please fill in this form to create an account.</p>

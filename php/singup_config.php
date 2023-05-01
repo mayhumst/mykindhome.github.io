@@ -24,10 +24,6 @@ $db = mysqli_connect('localhost', 'root', '', 'mykindhome') or die('Could not co
 $email = mysqli_real_escape_string($db, $_POST['email']);
 $psw = mysqli_real_escape_string($db, $_POST['psw']);
 
-// form validation ------ is this needed?? check
-if(empty($email)) {array_push($errors, "Email is required")};
-if(empty($psw)) {array_push($errors, "Password is required")};
-
 // check db for existing user with same email
 $user_check_query = "SELECT * FROM users WHERE email = '$email' LIMIT 1";
 
